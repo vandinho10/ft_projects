@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inserir Registro</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Inserir Novo Registro</h1>
+        <form method="post">
+            <div class="mb-3">
+                <label for="serie" class="form-label">Série</label>
+                <input type="text" class="form-control" name="serie" id="serie" required>
+            </div>
+            <div class="mb-3">
+                <label for="contrato" class="form-label">Contrato</label>
+                <select class="form-select" name="contrato" id="contrato" required>
+                    <option value="AGETRAN">AGETRAN</option>
+                    <option value="DETRANMS">DETRANMS
+                    </option>
+                    <option value="DNIT-MS">DNIT-MS</option>
+                    <option value="PNCT">PNCT</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="latitude" class="form-label">Latitude <span id="status"></span></label>
+
+                <input type="text" class="form-control" name="latitude" id="latitude" required>
+            </div>
+            <div class="mb-3">
+                <label for="longitude" class="form-label">Longitude</label>
+                <input type="text" class="form-control" name="longitude" id="longitude" required>
+            </div>
+            <div class="mb-3">
+                <label for="operadora" class="form-label">Operadora</label>
+                <select class="form-select" name="operadora" id="operadora">
+                    <option value="">Operadora</option>
+                    <option value="VIVO">VIVO</option>
+                    <option value="CLARO">CLARO</option>
+                    <option value="TIM">TIM</option>
+                    <option value="OI">OI</option>
+                    <option value="LINK">LINK</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="numero" class="form-label">Número</label>
+                <input type="text" class="form-control" name="numero" id="numero">
+            </div>
+            <div class="mb-3">
+                <label for="observacao" class="form-label">Observação</label>
+                <input type="text" class="form-control" name="observacao" id="observacao">
+            </div>
+            <button type="button" class="btn btn-secondary" id="insert-coordinates">Inserir Coordenadas
+                Atuais</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/geoips.js?up=1"></script>
+</body>
+
+</html>
