@@ -32,9 +32,10 @@ def get_db_connection():
 
 @app.route("/")
 def index():
+    title = "Gerenciamento de Registros"
     with get_db_connection() as conn:
         registros = conn.execute(text("SELECT * FROM registros")).fetchall()
-    return render_template("index.html", registros=registros)
+    return render_template("index.html", registros=registros, title=title)
 
 
 @app.route("/favicon.ico")
