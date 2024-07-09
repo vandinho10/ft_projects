@@ -1,0 +1,9 @@
+<script>
+    function abrirWaze(latitude, longitude) {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            window.location.href = 'waze://?ll=' + latitude + ',' + longitude + '&navigate=yes';
+        } else {
+            window.open('https://waze.com/ul?ll=' + latitude + ',' + longitude + '&navigate=yes', '_blank');
+        }
+    }
+</script>
